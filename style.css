@@ -1,0 +1,113 @@
+body {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.btn {
+  background-color: orange;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+.active-mode {
+  background-color: white;
+  color: #222;
+}
+.active-mode h1,
+.active-mode h2 {
+  color: #222;
+}
+.active-mode a {
+  color: #222;
+}
+.active-mode .btn {
+  color: black;
+}
+.active-mode nav {
+  background-color: #ddd;
+  color: black;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+  color: white;
+  flex-wrap: wrap;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#theme-toggle {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+#contact-form h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 15px;
+}
+input,
+textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  font-family: sans-serif;
+  resize: vertical;
+}
+form button {
+  background-color: orange;
+  color: black;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+form button:hover {
+  background-color: #ffca28;
+}
