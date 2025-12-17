@@ -22,3 +22,41 @@ themeBtn.addEventListener("click", function () {
     localStorage.setItem("theme", "dark");
   }
 });
+const projects = [
+  {
+    title: "Portfolio Website",
+    description: "Built with Semantic HTML, CSS Grid, Dark Mode Logic.",
+    image: "https://picsum.photos/300/300",
+    link: "#",
+  },
+  {
+    title: "Coming Soon",
+    description: "My next project using JavaScript APIs.",
+    image: "https://picsum.photos/300/300",
+    link: "#",
+  },
+  {
+    title: "The Robot Army",
+    description: "This would be another one in the future, I hope...",
+    image: "https://robohash.org/3",
+    link: "#",
+  },
+];
+const projectContainer = document.querySelector(".projects-grid");
+
+function loadProjects() {
+  projects.forEach((project) => {
+    const cardHTML = `
+    <div class="project-card">
+       <img src="${project.image}" alt="${project.title}">
+       <h3>${project.title}</h3>
+       <p>${project.description}</p>
+       <a href="${project.link}" class="btn">View Code</a>
+    </div>
+    `;
+
+    projectContainer.innerHTML += cardHTML;
+  });
+}
+
+loadProjects();

@@ -15,7 +15,7 @@ a {
   color: white;
 }
 .btn {
-  background-color: orange;
+  background-color: cyan;
   color: black;
   padding: 10px 20px;
   border-radius: 20px;
@@ -103,7 +103,7 @@ textarea {
   resize: vertical;
 }
 form button {
-  background-color: orange;
+  background-color: cyan;
   color: black;
   padding: 12px;
   border: none;
@@ -114,7 +114,7 @@ form button {
   margin-bottom: 50px;
 }
 form button:hover {
-  background-color: #ffca28;
+  background-color: cyan;
 }
 footer {
   margin-top: auto;
