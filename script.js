@@ -28,24 +28,30 @@ const projects = [
     description: "Built with Semantic HTML, CSS Grid, Dark Mode Logic.",
     image: "https://picsum.photos/300/300",
     link: "#",
+    category: "html",
   },
   {
     title: "Coming Soon",
     description: "My next project using JavaScript APIs.",
     image: "https://picsum.photos/300/300",
     link: "#",
+    category: "js",
   },
   {
     title: "The Robot Army",
     description: "This would be another one in the future, I hope...",
     image: "https://robohash.org/3",
     link: "#",
+    category: "js",
   },
 ];
 const projectContainer = document.querySelector(".projects-grid");
+const filterBtns = document.querySelectorAll(".filter-btn");
 
-function loadProjects() {
-  projects.forEach((project) => {
+function loadProjects(listToRender) {
+  projectContainer.innerHTML = "";
+
+  listToRender.forEach(project => {
     const cardHTML = `
     <div class="project-card">
        <img src="${project.image}" alt="${project.title}">
@@ -54,12 +60,29 @@ function loadProjects() {
        <a href="${project.link}" class="btn">View Code</a>
     </div>
     `;
-
     projectContainer.innerHTML += cardHTML;
   });
 }
 
-loadProjects();
+loadProjects(projects);
+
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    filterBtns.forEach(b => b.classList.remove("active"));
+
+    btn.classList.add("active");
+
+    const filterValue = btn.getAttribute("data-filter");
+
+    if (filterValue === "all") {
+      loadProjects(projects);
+    } else {
+      const filteredList = projects.filter(project => project.category === filterValue);
+      loadProjects(filteredList);
+    }
+  })
+})
 
 const textToType = "Frontend Developer";
 const typeWriterElement = document.querySelector(".typewriter");

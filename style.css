@@ -116,6 +116,32 @@ form button {
 form button:hover {
   background-color: cyan;
 }
+.filter-buttons {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.filter-btn {
+  background: #444;
+  color: white;
+  border: 1px solid #555;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.filter-btn:hover {
+  background: cyan;
+  color: black;
+  transform: translateY(-3px);
+}
+.filter-btn:active {
+  background: cyan;
+  color: black;
+  box-shadow: 0 0 10px cyan;
+}
 footer {
   margin-top: auto;
   background-color: #111;
