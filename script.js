@@ -60,3 +60,19 @@ function loadProjects() {
 }
 
 loadProjects();
+
+const textToType = "Frontend Developer";
+const typeWriterElement = document.querySelector(".typewriter");
+
+let charIndex = 0;
+
+function typeWriter() {
+  if (charIndex < textToType.length) {
+    typeWriterElement.textContent += textToType.charAt(charIndex);
+
+    charIndex++;
+
+    setTimeout(typeWriter, 100);
+  }
+}
+typeWriter();

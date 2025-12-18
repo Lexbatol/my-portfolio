@@ -162,3 +162,19 @@ footer {
   border-radius: 5px;
   margin-bottom: 15px;
 }
+.typewriter {
+  border-right: 2px solid cyan;
+  padding-right: 5px;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0% {
+    border-color: cyan;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: cyan;
+  }
+}
