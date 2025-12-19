@@ -23,7 +23,7 @@
       <section class="hero">
         <img src="DEV.jpeg" alt="Profile Picture of Lexbatol" />
         <h1>Lexbatol</h1>
-        <h2>I am a <span class="typewriter"></span> </h2>
+        <h2>I am a <span class="typewriter"></span></h2>
         <p id="hobby-text">Don't know my hobby💀</p>
         <a href="mailto:betterbatol@gmail.com" class="btn">Contact Me</a>
       </section>
@@ -40,16 +40,14 @@
       <section id="contact-form">
         <h2>Get in Touch</h2>
 
-        <form>
-          <label>Your Name:</label>
-          <input type="text" placeholder="John Doe" />
-          <label>Your Email</label>
-          <input type="email" placeholder="yourname@gmail.com" />
-
-          <label>Message:</label>
-          <textarea rows="5" placeholder="Type your message here..."></textarea>
-
-          <button type="submit">Send Message</button>
+        <form name="contact" method="POST" data-netlify="true">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
         </form>
       </section>
     </main>

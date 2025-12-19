@@ -51,7 +51,7 @@ const filterBtns = document.querySelectorAll(".filter-btn");
 function loadProjects(listToRender) {
   projectContainer.innerHTML = "";
 
-  listToRender.forEach(project => {
+  listToRender.forEach((project) => {
     const cardHTML = `
     <div class="project-card">
        <img src="${project.image}" alt="${project.title}">
@@ -66,10 +66,9 @@ function loadProjects(listToRender) {
 
 loadProjects(projects);
 
-filterBtns.forEach(btn => {
+filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-
-    filterBtns.forEach(b => b.classList.remove("active"));
+    filterBtns.forEach((b) => b.classList.remove("active"));
 
     btn.classList.add("active");
 
@@ -78,11 +77,13 @@ filterBtns.forEach(btn => {
     if (filterValue === "all") {
       loadProjects(projects);
     } else {
-      const filteredList = projects.filter(project => project.category === filterValue);
+      const filteredList = projects.filter(
+        (project) => project.category === filterValue
+      );
       loadProjects(filteredList);
     }
-  })
-})
+  });
+});
 
 const textToType = "Frontend Developer";
 const typeWriterElement = document.querySelector(".typewriter");
