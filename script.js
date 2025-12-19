@@ -67,7 +67,7 @@ function loadProjects(listToRender) {
        <img src="${project.image}" alt="${project.title}">
        <h3>${project.title}</h3>
        <p>${project.description}</p>
-       <a href="${project.link}" class="btn">Live Demo</a>
+       <a href="${project.link}" class="btn" target="_blank" rel="noopener noreferrer">Live Demo</a>
     </div>
     `;
     projectContainer.innerHTML += cardHTML;
