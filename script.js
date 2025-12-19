@@ -44,6 +44,14 @@ const projects = [
     link: "#",
     category: "js",
   },
+  {
+    title: "Zen Weather App",
+    description:
+      "A secure, serverless weather dashboad with real-time forecasts.",
+    image: "weather.jpeg",
+    link: "https://weather-app-ten-mu-32.vercel.app/",
+    category: "js",
+  },
 ];
 const projectContainer = document.querySelector(".projects-grid");
 const filterBtns = document.querySelectorAll(".filter-btn");
