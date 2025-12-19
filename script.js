@@ -24,24 +24,19 @@ themeBtn.addEventListener("click", function () {
 });
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "Built with Semantic HTML, CSS Grid, Dark Mode Logic.",
-    image: "https://picsum.photos/300/300",
-    link: "#",
+    title: "Personal Portfolio",
+    description: "The source code for this responsive, dark-mode enabled site.",
+    image: "portfolio-dark.jpeg",
+    link: "https://github.com/Lexbatol/my-portfolio",
     category: "html",
   },
   {
-    title: "Coming Soon",
-    description: "My next project using JavaScript APIs.",
-    image: "https://picsum.photos/300/300",
-    link: "#",
-    category: "js",
-  },
-  {
-    title: "The Robot Army",
-    description: "This would be another one in the future, I hope...",
-    image: "https://robohash.org/3",
-    link: "#",
+    title: "CineFile Movie DB",
+    description:
+      "Real-time search engine with a persistent Watchlist using Local Storage.",
+    image:
+      "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=800&auto=format&fit=crop",
+    link: "https://cinefile-psi.vercel.app/",
     category: "js",
   },
   {
@@ -50,6 +45,13 @@ const projects = [
       "A secure, serverless weather dashboad with real-time forecasts.",
     image: "weather.jpeg",
     link: "https://weather-app-ten-mu-32.vercel.app/",
+    category: "js",
+  },
+  {
+    title: "The Robot Army",
+    description: "This would be another one in the future, I hope...",
+    image: "https://robohash.org/3",
+    link: "#",
     category: "js",
   },
 ];
@@ -65,7 +67,7 @@ function loadProjects(listToRender) {
        <img src="${project.image}" alt="${project.title}">
        <h3>${project.title}</h3>
        <p>${project.description}</p>
-       <a href="${project.link}" class="btn">View Code</a>
+       <a href="${project.link}" class="btn">Live Demo</a>
     </div>
     `;
     projectContainer.innerHTML += cardHTML;
